@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 
 //post route
-app.post("/todos",(req,res)=>{
+app.post("/todos",(req,res) => {
   var todo = new Todo({
     text:req.body.text
   });
@@ -28,3 +28,5 @@ app.post("/todos",(req,res)=>{
 app.listen(3000,()=>{
   console.log("Server started");
 });
+
+module.exports = {app};
