@@ -8,6 +8,7 @@ var {User} = require("./models/user");
 var {ObjectID} = require("mongodb");
 
 var app = express();
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
@@ -50,13 +51,13 @@ app.get("/todos/:id",(req, res)=>{
 
      res.send({todo});
   }).catch((e)=>{
-    res,status(400).send();
+    res.status(400).send();
   });
 
 });
 
-app.listen(3000,()=>{
-  console.log("Server started");
+app.listen(port,()=>{
+  console.log(`Server started ${port}`);
 });
 
 module.exports = {app};
