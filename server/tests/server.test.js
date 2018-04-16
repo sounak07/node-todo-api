@@ -5,13 +5,13 @@ var {ObjectID} = require("mongodb");
 const {app} = require('./../server');
 const {Todo} = require('./../models/todo');
 
-const todos = [{
-  _id:new ObjectID(),
-  text: 'First test todo'
-}, {
-  _id:new ObjectID(),
-  text: 'Second test todo'
-}];
+// const todos = [{
+//   _id:new ObjectID(),
+//   text: 'First test todo'
+// }, {
+//   _id:new ObjectID(),
+//   text: 'Second test todo'
+// }];
 
 beforeEach(function(done){
   this.timeout(3000);
